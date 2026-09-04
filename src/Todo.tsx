@@ -12,6 +12,7 @@ interface TodoPropsProps {
 function Todo({task,time}: TodoPropsProps){
     return (
           <li>Do this work : {task} by {time}</li>
+          
     )
 }
 
