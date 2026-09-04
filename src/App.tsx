@@ -1,19 +1,21 @@
 import './App.css'
+import Cart from './Cart'
 // import Todo from './Todo'
 
 function App() {
 
-  function handleClick(){
-    alert("Hello, I am clicked")
-  }
+  // function handleClick(){
+  //   alert("Hello, I am clicked")
+  // }
 
   return (
     <>
      <h1>Siam App</h1>
      {/* <Todo task="Buy groceries" time="5:00 PM" /> */}
-     <button className='siam' onClick={handleClick}>
+     {/* <button className='siam' onClick={handleClick}>
       click me
-     </button>
+     </button> */}
+     <Cart/>
     </>
   )
 }
