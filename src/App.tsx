@@ -1,7 +1,13 @@
+import { Suspense } from 'react'
 import './App.css'
-import Cart from './Cart'
-import Counter from './Counter'
+// import Cart from './Cart'
+// import Counter from './Counter'
+import Users from './Users'
 // import Todo from './Todo'
+
+const userDataPromise = fetch(
+  'https://jsonplaceholder.typicode.com/users'
+).then(res => res.json())
 
 function App() {
 
@@ -11,13 +17,16 @@ function App() {
 
   return (
     <>
-     <h1>Siam App</h1>
+     {/* <h1>Siam App</h1> */}
      {/* <Todo task="Buy groceries" time="5:00 PM" /> */}
      {/* <button className='siam' onClick={handleClick}>
       click me
      </button> */}
-     <Cart/>
-     <Counter/>
+     {/* <Cart/>
+     <Counter/> */}
+     <Suspense fallback={<h1>Loading...</h1>}>
+      <Users userDataPromise = {userDataPromise} />
+     </Suspense>
     </>
   )
 }
