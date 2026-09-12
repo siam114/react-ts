@@ -1,4 +1,5 @@
 import { use } from "react";
+import UserCart from "./UserCart";
 
 export default function Users({ userDataPromise }) {
 
@@ -8,7 +9,10 @@ export default function Users({ userDataPromise }) {
 
     return (
         <div>
-            <h1>Users</h1>
+            <h1>Users:{users.length}</h1>
+            {
+                users.map (user => <UserCart user={user}/>)
+            }
         </div>
     );
 }
