@@ -4,6 +4,7 @@ import './App.css'
 // import Counter from './Counter'
 import Users from './Users'
 import Posts from './Posts'
+import Todos from './Todos'
 // import Todo from './Todo'
 
 const userDataPromise = fetch(
@@ -30,7 +31,10 @@ function App() {
       click me
      </button> */}
      {/* <Cart/>
+     
      <Counter/> */}
+     <Todos/> 
+
      <Suspense fallback={<h1>Loading...</h1>}>
       <Users userDataPromise = {userDataPromise} />
      </Suspense>
