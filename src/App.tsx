@@ -1,5 +1,6 @@
 import './App.css'
 import Cart from './Cart'
+import Counter from './Counter'
 // import Todo from './Todo'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       click me
      </button> */}
      <Cart/>
+     <Counter/>
     </>
   )
 }
